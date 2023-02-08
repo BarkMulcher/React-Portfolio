@@ -54,16 +54,16 @@ function Content() {
     <section className="main_card" ref={fullCard}>
       <div className="social_icons" ref={socialIcons}>
         <a
-          href="https://twitter.com/DevangSaklani"
+          href="https://linkedin.com/Lucas-Haskell"
           target="_blank"
           rel="noopener noreferrer"
-          className="twitter_logo"
-          aria-label="Twitter profile"
+          className="linkedin-logo"
+          aria-label="LinkedIn profile"
         >
           <FaTwitter />
         </a>
         <a
-          href="https://github.com/Devang47/simple-portfolio"
+          href="https://github.com/BarkMulcher"
           target="_blank"
           rel="noopener noreferrer"
           className="github_logo"
@@ -74,31 +74,23 @@ function Content() {
       </div>
       <section className="container">
         <h1 className="name primary" ref={heading}>
-          Hi, i'm Devang Saklani<span className="highlighted">.</span>
+          Hi, i'm Lucas Haskell<span className="highlighted">.</span>
         </h1>
         <div className="divider highlighted_bg" ref={dividerLine}></div>
 
         <section className="description secondary" ref={paragraph}>
           <p>
             I'm a Full stack Web developer, currently learning libraries like
-            React and Three js. I'm also pretty good at UI and UX design. My
+            React. I'm also pretty good at UI and UX design. My
             arsenal includes tech like:
             <span className="highlighted"> React</span>,
-            <span className="highlighted"> Three js</span>,
-            <span className="highlighted"> Figma</span> and other supporting
-            libraries (Redux, Scss etc.) .
-          </p>
-          <p>
-            I have worked in many big tech companies like
-            <span className="highlighted"> Apple</span> and
-            <span className="highlighted"> Google</span> as a Full stack
-            developer.
+            <span className="highlighted"> Three js</span>
           </p>
           <p>
             Although i’m currently not looking for job opportunities but my
             inbox is always open:&nbsp;
-            <a href="mailto:devangsaklani@gmail.com" className="highlighted">
-              devangsaklani@gmail.com
+            <a href="mailto:lucas.c.haskell@gmail.com" className="highlighted">
+              lucas.c.haskell@gmail.com
             </a>
           </p>
           <p>These are some of my recent projects:</p>
