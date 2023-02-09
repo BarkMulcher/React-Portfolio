@@ -1,16 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { FaTwitter } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import sheltr from '../../src/sheltr.png';
+import indexmori from '../../src/indexmori.jpg';
 
-function Content() {
+
+export default function Content() {
   const fullCard = useRef(null);
   const heading = useRef(null);
   const dividerLine = useRef(null);
   const paragraph = useRef(null);
   const socialIcons = useRef(null);
-  const card1 = useRef(null);
-  const card2 = useRef(null);
+  // const card1 = useRef(null);
+  // const card2 = useRef(null);
 
   useEffect(() => {
     const timeline = gsap.timeline({ ease: "sine.out" });
@@ -41,13 +43,13 @@ function Content() {
         duration: 0.4,
         ease: "none",
       })
-      .from([card1.current, card2.current], {
-        opacity: 0,
-        translateY: 40,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: "none",
-      });
+      // .from([card1.current, card2.current], {
+      //   opacity: 0,
+      //   translateY: 40,
+      //   duration: 0.4,
+      //   stagger: 0.1,
+      //   ease: "none",
+      // });
   });
 
   return (
@@ -57,10 +59,10 @@ function Content() {
           href="https://linkedin.com/Lucas-Haskell"
           target="_blank"
           rel="noopener noreferrer"
-          className="linkedin-logo"
+          className="linkedin_logo"
           aria-label="LinkedIn profile"
         >
-          <FaTwitter />
+          <FaLinkedinIn />
         </a>
         <a
           href="https://github.com/BarkMulcher"
@@ -80,15 +82,14 @@ function Content() {
 
         <section className="description secondary" ref={paragraph}>
           <p>
-            I'm a Full stack Web developer, currently learning libraries like
-            React. I'm also pretty good at UI and UX design. My
-            arsenal includes tech like:
+            I'm a Web & Software Developer. I am proficient in JavaScript and React. 
+            I'm also learning Python. My arsenal includes shit like:
             <span className="highlighted"> React</span>,
-            <span className="highlighted"> Three js</span>
+            <span className="highlighted"> MongoDB</span>
           </p>
           <p>
-            Although i’m currently not looking for job opportunities but my
-            inbox is always open:&nbsp;
+            I'm currently finishing up a course in Python, and will be continuing my
+            job search in August 2023. In the meantime, my inbox is always open:&nbsp;
             <a href="mailto:lucas.c.haskell@gmail.com" className="highlighted">
               lucas.c.haskell@gmail.com
             </a>
@@ -96,32 +97,50 @@ function Content() {
           <p>These are some of my recent projects:</p>
         </section>
         <div className="projects">
-          <div className="project_1 highlighted_bg project" ref={card1}>
-            <a
-              href="http://#"
+          <div className="project_1 highlighted_bg project" >
+          <a
+              href="https://sheltr.tech"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Project1"
+              aria-label="sheltr.tech"
             >
-              {/* add your project cover image here */}
-              {/* <img src="#" alt="Project" /> */}
+              <img src={sheltr} alt="Sheltr.tech" />
+            </a>
+          </div>
+          <div className="project_2 highlighted_bg project" >
+          <a
+              href="https://serene-shelf-90086.herokuapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Index Mori"
+            >
+              {/* // add your project cover image here  */}
+              <img src={indexmori} alt="index mori" />
+            </a> 
+          </div>
+            {/* ref={card1} ref={card2} <a
+              href="https://sheltr.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="sheltr.tech"
+            >
+              <img src={require("../images/sheltr.png")} alt="Sheltr.tech" />
             </a>
           </div>
           <div className="project_2 highlighted_bg project" ref={card2}>
             <a
-              href="http://#"
+              href="https://serene-shelf-90086.herokuapp.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Project2"
+              aria-label="Index Mori"
             >
-              {/* add your project cover image here */}
-              {/* <img src="#" alt="Project" /> */}
-            </a>
-          </div>
+              // add your project cover image here 
+              <img src={require("../images/indexmori.jpg")} alt="index mori" />
+            </a> */}
+          {/* </div> */}
         </div>
       </section>
     </section>
   );
 }
 
-export default Content;

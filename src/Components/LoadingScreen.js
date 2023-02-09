@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-function Loading() {
+export default function Loading() {
   const loadingBar = useRef(null);
   const loadingScreen = useRef(null);
 
@@ -29,4 +29,3 @@ function Loading() {
   );
 }
 
-export default Loading;
